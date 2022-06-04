@@ -41,6 +41,40 @@ const arregloFiltrado = arre.filter(function (elemento, indice){
 console.log(arregloFiltrado);
 
 
+//Ejercicio Guiado 
+
+function promedio (arregloCalificaciones){
+   var suma = arregloCalificaciones.reduce(function (acumulador, elemento){
+        return acumulador + elemento;
+    },
+    0
+    );
+
+    var promedio = suma / arregloCalificaciones.length
+
+    if(promedio<31){
+        return 'Promedio: '+ promedio + '. Muy deficiente';
+
+    } else if(promedio < 51){
+        return 'Promedio: '+ promedio + '. Deficiente';
+
+    }else if(promedio < 61 ){
+    return 'Promedio: '+ promedio + '. Suficiente';
+    } else if (promedio < 71) {
+        return 'Promedio: ' + promedio + '. Bien...';
+        } else if (promedio < 91) {
+        return 'Promedio: ' + promedio + '. Notable...';
+        } else {
+        return 'Promedio: ' + promedio + '. Sobresaliente...';
+        }
+    return arregloCalificaciones;
+
+  
+}
+const calificaciones = [80, 75, 90, 65, 66]
+console.log (promedio(calificaciones));
+
+
 
 
 
