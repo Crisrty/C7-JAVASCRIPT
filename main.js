@@ -34,6 +34,13 @@ arre.sort(function (elemento1, elemento2){
 
 console.log(arre);
 
+const arregloFiltrado = arre.filter(function (elemento, indice){
+    return !(elemento % 2 == 0)
+})
+
+console.log(arregloFiltrado);
+
+
 
 
 
